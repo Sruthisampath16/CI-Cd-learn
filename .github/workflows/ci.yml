@@ -9,11 +9,11 @@ jobs:
          runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      	- name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Build Docker Image
+     	 - name: Build Docker Image
         uses: docker build  -t ci-cd-app-test .
      
-      - name: Run tests inside docker
+     	 - name: Run tests inside docker
         run: docker run ci-cd-app-test
